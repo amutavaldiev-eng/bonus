@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="box">
+        <h2>Update Wallet</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" value="{{wallet.name}}" required>
+        <button type="submit">Update</button>
+    </form>
+    <a href="/read_wallet">Back</a>
+</div>
+{% endblock %}

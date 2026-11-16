@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="box">
+        <h2>Update History</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="title" value="{{history.title}}" required>
+            <input type="number" name="amount" value="{{history.amount}}" required>
+            <button type="submit">Update</button>
+        </form>
+        <a href="/read_history">Back</a>
+    </div>
+{% endblock %}

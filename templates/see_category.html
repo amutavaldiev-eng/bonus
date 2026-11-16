@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="box"  style="margin-left: 400px;">
+        <h2>Categories</h2>
+    {% for category in categories %}
+        <p>{{category.name}}</p>
+        <a href="/update_category/{{category.id}}/">Update</a>
+        <a href="/delete_category/{{category.id}}/">Delete</a>
+        <hr>
+    {% endfor %}
+    <a href="/add_category">Add Category</a>
+    <a href="/home">Home</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="box" style="margin-left: 400px;">
+        <h2>Transaction History</h2>
+    {% for item in history %}
+        <p>Title: {{item.title}}</p>
+        <p>Wallet: {{item.wallet.name}}</p>
+        <p>Category: {{item.category.name}}</p>
+        <p>Amount: {{item.amount}}</p>
+        <p>Type: {{item.type}}</p>
+        <p>Date: {{item.date}}</p>
+
+        <a href="/update_history/{{item.id}}">Update</a>
+        <a href="/delete_history/{{item.id}}">Delete</a>
+        <hr>
+    {% endfor %}
+    <a href="/add_history/">Add History</a>
+    <a href="/home">Home</a>
+</div>
+{% endblock %}

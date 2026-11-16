@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="box" style="margin-left: 400px;">
+        <h2>Add Category</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Category Name" required>
+        <button type="submit">Add Category</button>
+    </form>
+    <a href="/see_category">Categories</a>
+    <a href="/home">Home</a>
+</div>
+{% endblock %}

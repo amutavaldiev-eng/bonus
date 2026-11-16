@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="box"  style="margin-left: 400px;">
+        <h2>My Wallets</h2>
+    {% for wallet in wallets %}
+        <b>Wallet:</b> {{wallet.name}}
+        <p>Balance: {{wallet.balance}} TJS</p>
+        <a href="/update_wallet/{{wallet.id}}">Update</a>
+        <a href="/delete_wallet/{{wallet.id}}">Delete</a>
+        <hr>
+    {% endfor %}
+
+    <a href="/add_wallet/">Add Wallet</a>
+    <a href="/home">Home</a>
+</div>
+{% endblock %}

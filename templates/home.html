@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="box" style="margin-left: 400px;">
+    <h1>Finance Tracker</h1>
+    <h3>Welcome, {{ request.user.username }}!</h3>
+
+    <a href="/add_wallet/">Add Wallet</a>
+    <a href="/read_wallet/">My Wallets</a>
+    <a href="/deposit/">Deposit</a>
+    <a href="/withdraw/">Withdraw</a>
+    <a href="/add_history/">Add History</a>
+    <a href="/read_history/">History</a>
+    <a href="/add_category/">Add Category</a>
+    <a href="/see_category/">Categories</a>
+    <a href="/logout/">Logout</a>
+</div>
+
+{% endblock %}
